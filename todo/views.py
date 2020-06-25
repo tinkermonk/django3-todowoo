@@ -36,15 +36,10 @@ def loginuser(request):
             login(request, user)
             return redirect('currenttodos')
 
-
-
-
-
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
-
 
 def currenttodos(request):
     return render(request, 'todo/currenttodos.html')
